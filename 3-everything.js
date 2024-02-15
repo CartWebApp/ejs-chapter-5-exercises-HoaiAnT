@@ -1,6 +1,13 @@
 function every(array, test) {
-    // Your code here.
-  }
+    for(let i=0; i <array.length;i++){
+      if (!test (array[i]));
+      return false;
+    }
+    return true;
+}
+function every(array,test){
+  return !array.some(element => !test(element));
+}
   
   console.log(every([1, 3, 5], n => n < 10));
   // → true
